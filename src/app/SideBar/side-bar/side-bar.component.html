@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="upper">
+    <h3>Hazem</h3>
+    <ul>
+      <li *ngFor="let link of links">
+        <a [routerLink]="link.address" routerLinkActive="active">
+          <i [class]="link.icon"></i>
+          <span>{{ link.name }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="lower">
+    <p>Made By <span>Hazem</span></p>
+    <p>Designed By <span>Elzero</span></p>
+    <p>All rights <span>Reserved </span>®</p>
+    <p>Copyrights at <span>2024 </span>©</p>
+  </div>
+</div>

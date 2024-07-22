@@ -1,0 +1,11 @@
+.main-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--lightblue);
+}
+side-bar {
+  box-shadow: 0 0 10px var(--greydark);
+  position: relative;
+  padding: 20px;
+  background-color: var(--white);
+}

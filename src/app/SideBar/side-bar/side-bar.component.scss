@@ -1,0 +1,88 @@
+.upper {
+  width: 200px;
+  h3 {
+    user-select: none;
+    font-family: "Cookie", "Open sans";
+    font-size: 38px;
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h3::before,
+  h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  h3::before {
+    width: 110px;
+    height: 2px;
+    background-color: var(--black);
+    bottom: -3px;
+    border-radius: 20px;
+  }
+  h3::after {
+    height: 12px;
+    width: 12px;
+    background-color: var(--greylight);
+    bottom: -10px;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    outline: 5px double white;
+  }
+  ul {
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        transition: 0.3s;
+        span {
+          color: inherit;
+          margin-left: 10px;
+          position: relative;
+          transition: margin-left ease-in-out 0.2s;
+        }
+        i {
+          color: inherit;
+        }
+      }
+      a:hover,
+      a.active {
+        background-color: var(--greylight);
+      }
+      a:hover > span {
+        margin-left: 14px;
+      }
+      a.active {
+        color: var(--blue);
+      }
+    }
+  }
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  > .lower {
+    > p {
+      padding: 0px 10px;
+      margin: 0;
+      font-size: 14px;
+      > span {
+        color: var(--blue);
+        font-weight: bold;
+        font-size: 24px;
+        font-family: "Cookie", "Open sans";
+      }
+    }
+  }
+}
