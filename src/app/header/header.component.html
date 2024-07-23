@@ -1,0 +1,23 @@
+<div class="main boxshadow">
+  <my-search></my-search>
+  <div class="icons">
+    <a routerLink="Profile">
+      <img src="assets/avatar1.png" alt="avatar" />
+    </a>
+    <span (click)="toggleBar()">
+      <i class="fa-solid fa-bell fa-lg"> </i>
+    </span>
+    <div class="bar boxshadow" *ngIf="barFlag" (ClickedOutside)="hideBar()">
+      <ul>
+        <h3>Notifications</h3>
+        <li *ngFor="let notification of notificationData">
+          <img [src]="notification.img" alt="notification avatar" />
+          <div class="notification-text">
+            <span>{{ notification.notification }}</span>
+            <span>{{ notification.date }}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

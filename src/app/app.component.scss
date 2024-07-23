@@ -3,9 +3,18 @@
   min-height: 100vh;
   background-color: var(--lightblue);
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
 side-bar {
-  box-shadow: 0 0 10px var(--greydark);
+  box-shadow: 0 0 10px var(--grey);
   position: relative;
   padding: 20px;
+  @media (max-width: 767px) {
+    padding: 10px;
+  }
   background-color: var(--white);
 }

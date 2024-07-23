@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { DarkModeComponent } from '../Utility/dark-mode/dark-mode.component';
 
 @Component({
   selector: 'side-bar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterLink, RouterLinkActive, CommonModule, DarkModeComponent],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.scss'
 })
@@ -24,9 +25,5 @@ export class SideBarComponent {
       { name: "Files", icon: "fa-solid fa-file fa-fw", address: "Files" },
       { name: "Settings", icon: "fa-solid fa-gear fa-fw", address: "Settings" }
     ]
-  }
-  changetheme() {
-    document.documentElement.style.setProperty("--white", "black")
-    document.documentElement.style.setProperty("--black", "white")
   }
 }

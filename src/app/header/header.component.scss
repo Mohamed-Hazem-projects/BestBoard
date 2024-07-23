@@ -1,0 +1,151 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 15px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  > span {
+    position: relative;
+    margin-left: 10px;
+    background-color: var(--grey);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    i {
+      animation: shake 1.5s linear 1.5s infinite;
+    }
+  }
+  > span::before {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    right: 2px;
+    top: -2px;
+    background-color: var(--red);
+  }
+  img {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+}
+.bar {
+  width: 300px;
+  height: 400px;
+  background-color: var(--grey2);
+  position: fixed;
+  top: 72px;
+  right: 15px;
+  overflow-y: auto;
+  border-radius: 10px;
+  animation: bars 0.3s ease-out;
+  > ul {
+    margin: 0;
+    > h3 {
+      padding: 10px;
+      text-align: center;
+      margin: 0;
+    }
+    > li {
+      display: flex;
+      align-items: center;
+      background-color: var(--greylight2);
+      padding: 8px 5px;
+      border-top: 1px solid var(--greydark);
+      > img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        margin-left: 0;
+        border: 2px solid var(--white);
+        cursor: default;
+      }
+      > div {
+        width: fit-content;
+        margin-left: 9px;
+        > span:first-child {
+          display: block;
+          width: 100%;
+          color: var(--black);
+          font-size: 14px;
+        }
+        > span:last-child {
+          color: var(--greydark);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(lightblue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue2);
+}
+@keyframes bars {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 400px;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+  4% {
+    transform: rotate(10deg);
+  }
+  8% {
+    transform: rotate(-10deg);
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  12% {
+    transform: rotate(-8deg);
+  }
+  14% {
+    transform: rotate(6deg);
+  }
+  16% {
+    transform: rotate(-6deg);
+  }
+  18% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(-2deg);
+  }
+  22% {
+    transform: rotate(2deg);
+  }
+  24% {
+    transform: rotate(-2deg);
+  }
+  26% {
+    transform: rotate(0);
+  }
+}
