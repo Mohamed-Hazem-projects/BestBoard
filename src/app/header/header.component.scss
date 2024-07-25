@@ -97,11 +97,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+  background: var(--blue2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue2);
+  background: var(--blue);
 }
 @keyframes bars {
   from {

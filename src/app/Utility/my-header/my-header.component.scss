@@ -1,0 +1,21 @@
+h1 {
+  position: relative;
+  width: fit-content;
+  margin: 20px 20px 40px;
+}
+h1::before,
+span {
+  content: "";
+  height: 3px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+h1::before {
+  background-color: var(--white);
+  width: 100%;
+}
+span {
+  background-color: var(--black);
+  width: 10%;
+}
