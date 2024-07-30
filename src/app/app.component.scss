@@ -1,7 +1,7 @@
 .main-layout {
   display: flex;
   min-height: 100vh;
-  background-color: var(--lightblue);
+  background-color: var(--lightbluetemp);
 }
 .content {
   display: flex;
@@ -10,9 +10,12 @@
   overflow: hidden;
 }
 side-bar {
-  box-shadow: 0 0 10px var(--grey);
+  box-shadow: 0 0 10px var(--greytemp);
   position: relative;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
   @media (max-width: 767px) {
     padding: 10px;
   }

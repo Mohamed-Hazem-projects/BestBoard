@@ -1,0 +1,77 @@
+<div class="main">
+  <div class="upper">
+    <h2>Settings</h2>
+    <div class="icon" (click)="CloseSettings()">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+  <div class="settings">
+    <form #form="ngForm" (ngSubmit)="getFormData(form)">
+      <h3>First Target:</h3>
+      <label for="firstTargetName">Name:</label>
+      <input type="text" name="firstTargetName" id="firstTargetName" ngModel />
+      <label for="firstTargetValue">Value :</label>
+      <input
+        type="text"
+        name="firstTargetValue"
+        id="firstTargetValue"
+        ngModel
+      />
+      <label for="firstTargetPerc">Percentage : {{ firstrange.value }}%</label>
+      <input
+        type="range"
+        name="firstTargetPerc"
+        id="firstTargetPerc"
+        #firstrange
+        ngModel
+      />
+
+      <h3>Second Target:</h3>
+      <label for="secondTargetName">Name:</label>
+      <input
+        type="text"
+        name="secondTargetName"
+        id="secondTargetName"
+        ngModel
+      />
+      <label for="secondTargetValue">Value :</label>
+      <input
+        type="text"
+        name="secondTargetValue"
+        id="secondTargetValue"
+        ngModel
+      />
+      <label for="secondTargetPerc"
+        >Percentage : {{ secondrange.value }}%</label
+      >
+      <input
+        type="range"
+        name="secondTargetPerc"
+        id="secondTargetPerc"
+        #secondrange
+        ngModel
+      />
+
+      <h3>Third Target:</h3>
+      <label for="thirdTargetName">Name:</label>
+      <input type="text" name="thirdTargetName" id="thirdTargetName" ngModel />
+      <label for="thirdTargetValue">Value :</label>
+      <input
+        type="text"
+        name="thirdTargetValue"
+        id="thirdTargetValue"
+        ngModel
+      />
+      <label for="thirdTargetPerc">Percentage : {{ thirdrange.value }}%</label>
+      <input
+        type="range"
+        name="thirdTargetPerc"
+        id="thirdTargetPerc"
+        #thirdrange
+        ngModel
+      />
+
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+</div>

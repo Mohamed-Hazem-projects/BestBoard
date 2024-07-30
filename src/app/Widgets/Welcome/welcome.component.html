@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="intro">
+    <div class="writing">
+      <h2>Welcome</h2>
+      <p>{{ User.FirstName }}</p>
+    </div>
+    <img src="assets/welcome.png" alt="welcome" />
+  </div>
+  <img src="assets/avatar1.png" alt="" class="avatar boxshadow" />
+  <div class="body">
+    <div>
+      {{ User.FirstName }} {{ User.LastName }} <span>{{ User.Position }}</span>
+    </div>
+    <div>{{ User.NoOfProjects }} <span>Project</span></div>
+    <div>${{ User.MoneyEarned }} <span>Earned</span></div>
+  </div>
+  <a routerLink="/Profile">Profile</a>
+</div>

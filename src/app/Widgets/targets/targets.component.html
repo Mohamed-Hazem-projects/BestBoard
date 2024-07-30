@@ -1,0 +1,63 @@
+<div class="target">
+  <div class="top">
+    <h2><i class="fa-solid fa-bars-progress"></i>Yearly Targets</h2>
+    <i class="fa-solid fa-gear" (click)="ToggleSettings()"></i
+    ><targets-settings
+      *ngIf="settingsOpen"
+      (Submitted)="changeSettings($event)"
+      (Close)="CloseSettings($event)"
+    ></targets-settings>
+  </div>
+  <p>Targets of the year.</p>
+  <div>
+    <div class="icon blue">
+      <i class="fa-solid fa-sack-dollar fa-lg"></i>
+    </div>
+    <div class="details">
+      <span>{{ Targets.first.Name }}:</span>
+      <span>${{ Targets.first.Value }}</span>
+      <div class="progress blue">
+        <span
+          [style.width]="Targets.first.Percentage + '%'"
+          [class.animation1]="animate"
+        >
+          <span>{{ Targets.first.Percentage }}%</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="icon green" #green>
+      <i class="fa-solid fa-user-tie"></i>
+    </div>
+    <div class="details">
+      <span>{{ Targets.second.Name }}: </span>
+      <span>{{ Targets.second.Value }}</span>
+      <div class="progress green">
+        <span
+          [style.width]="Targets.second.Percentage + '%'"
+          [class.animation2]="animate"
+        >
+          <span>{{ Targets.second.Percentage }}%</span>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="icon orange">
+      <i class="fa-solid fa-diagram-project"></i>
+    </div>
+    <div class="details">
+      <span>{{ Targets.third.Name }}:</span>
+      <span>{{ Targets.third.Value }}</span>
+      <div class="progress orange">
+        <span
+          [style.width]="Targets.third.Percentage + '%'"
+          [class.animation3]="animate"
+        >
+          <span>{{ Targets.third.Percentage }}%</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

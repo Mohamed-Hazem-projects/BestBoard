@@ -1,0 +1,188 @@
+.target {
+  padding: 20px;
+  .top {
+    margin-bottom: 0;
+    color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    > h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      > i {
+        color: var(--blue);
+        margin-right: 8px;
+        font-size: 22px;
+      }
+    }
+    > i {
+      margin-top: -8px;
+      font-size: 30px;
+      margin-right: 10px;
+      @media (max-width: 767px) {
+        font-size: 25px;
+        margin-right: 0px;
+      }
+      cursor: pointer;
+    }
+  }
+  > p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--greydark);
+    font-size: 15px;
+  }
+  > div {
+    margin-bottom: 20px;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    > .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+      > i {
+        font-size: 33px;
+      }
+    }
+    > .details {
+      flex: 1;
+      > span:first-child {
+        font-size: 14px;
+        color: var(--greydark);
+      }
+      > span:nth-child(2) {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      > .progress {
+        position: relative;
+        height: 4px;
+        > span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          > span {
+            position: absolute;
+            color: hsl(0deg 0% 96.72% / 95%);
+            padding: 4px 8px;
+            text-align: center;
+            font-weight: bold;
+            top: -32px;
+            right: -21.35px;
+            font-size: 14px;
+            border-radius: 7px;
+          }
+          > span::after {
+            content: "";
+            border-color: transparent;
+            border-width: 5px;
+            border-style: solid;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+}
+.icon.blue {
+  background-color: hsl(212deg 100% 50% / 20%);
+  > i {
+    color: var(--blue);
+  }
+}
+.icon.orange {
+  background-color: hsl(38 92% 50% / 20%);
+  > i {
+    color: var(--orange);
+  }
+}
+.icon.green {
+  background-color: hsl(142deg 71% 45% / 20%);
+  > i {
+    color: var(--green);
+  }
+}
+.target > div > .details > .progress.blue {
+  background-color: hsl(212deg 100% 50% / 20%);
+  > span {
+    color: var(--blue);
+    background-color: var(--blue);
+    > span {
+      background-color: var(--blue);
+    }
+    > span::after {
+      border-top-color: var(--blue);
+    }
+  }
+}
+.target > div > .details > .progress.green {
+  background-color: hsl(142deg 71% 45% / 20%);
+  > span {
+    color: var(--green);
+    background-color: var(--green);
+    > span {
+      background-color: var(--green);
+    }
+    > span::after {
+      border-top-color: var(--green);
+    }
+  }
+}
+.target > div > .details > .progress.orange {
+  background-color: hsl(38 92% 50% / 20%);
+  > span {
+    color: var(--orange);
+    background-color: var(--orange);
+    > span {
+      background-color: var(--orange);
+    }
+    > span::after {
+      border-top-color: var(--orange);
+    }
+  }
+}
+// .animation1 {
+//   animation: span1 0.5s ease-in-out;
+// }
+.animation2 {
+  animation: span2 0.5s ease-in-out;
+}
+.animation3 {
+  animation: span3 0.5s ease-in-out;
+}
+@keyframes span1 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 60%;
+  }
+}
+@keyframes span2 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 40%;
+  }
+}
+@keyframes span3 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 60%;
+  }
+}
+targets-settings {
+  position: absolute;
+}

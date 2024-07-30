@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
 import { MyHeaderComponent } from '../../Utility/my-header/my-header.component';
+import { WrapperComponent } from '../../Utility/wrapper/wrapper.component';
+import { WelcomeComponent } from '../../Widgets/Welcome/welcome.component';
+import { DraftComponent } from '../../Widgets/draft/draft.component';
+import { TargetsComponent } from '../../Widgets/targets/targets.component';
 
 @Component({
   selector: 'dashboard-home',
   standalone: true,
-  imports: [MyHeaderComponent],
+  imports: [
+    MyHeaderComponent
+    , WrapperComponent
+    , WelcomeComponent
+    , DraftComponent
+    , TargetsComponent
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

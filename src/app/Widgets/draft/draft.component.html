@@ -1,0 +1,11 @@
+<div class="main">
+  <h2><i class="fa-solid fa-pen-nib"></i>Quick Draft</h2>
+  <p>Write a draft for your ideas.</p>
+  <form #form="ngForm" (ngSubmit)="getFormData(form)">
+    <input class="input" type="text" placeholder="Title" name="title" ngModel />
+    <span></span>
+    <textarea placeholder="Your thoughts." name="thoughts" ngModel></textarea>
+    <span></span>
+    <input class="button" type="submit" value="Save" />
+  </form>
+</div>
