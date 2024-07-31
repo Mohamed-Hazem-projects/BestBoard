@@ -1,0 +1,83 @@
+.tickets {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  > .top {
+    display: flex;
+    justify-content: space-between;
+    > h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      @media (max-width: 767px) {
+        font-size: 21px;
+      }
+      i {
+        color: var(--blue);
+        font-size: 22px;
+        @media (max-width: 767px) {
+          font-size: 20px;
+        }
+        margin-right: 8px;
+      }
+    }
+    tickets-settings {
+      position: absolute;
+    }
+    > i {
+      font-size: 30px;
+      margin-right: 10px;
+      @media (max-width: 767px) {
+        font-size: 21px;
+        margin-right: 0;
+        margin-top: 1px;
+      }
+      cursor: pointer;
+    }
+  }
+  > p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--greydark);
+    font-size: 15px;
+  }
+  > div {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    > div {
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--greydark);
+      border: 1px solid var(--grey2);
+      width: calc(50% - 10px);
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      > i {
+        margin-bottom: 10px;
+        font-size: 32px;
+      }
+      > span {
+        display: block;
+        color: var(--black);
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+.orange {
+  color: var(--orange);
+}
+.blue {
+  color: var(--blue);
+}
+.green {
+  color: var(--green);
+}
+.red {
+  color: var(--red);
+}

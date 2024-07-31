@@ -1,8 +1,8 @@
 <div class="target">
   <div class="top">
     <h2><i class="fa-solid fa-bars-progress"></i>Yearly Targets</h2>
-    <i class="fa-solid fa-gear" (click)="ToggleSettings()"></i
-    ><targets-settings
+    <i class="fa-solid fa-gear" (click)="ToggleSettings()"></i>
+    <targets-settings
       *ngIf="settingsOpen"
       (Submitted)="changeSettings($event)"
       (Close)="CloseSettings($event)"

@@ -1,0 +1,34 @@
+<div class="tickets">
+  <div class="top">
+    <h2><i class="fa-solid fa-chart-line"></i>Tickets Statistics</h2>
+    <i class="fa-solid fa-gear" (click)="ToggleSettings()"></i>
+    <tickets-settings
+      *ngIf="settingsOpen"
+      (Submitted)="changeSettings($event)"
+      (Close)="CloseSettings($event)"
+    ></tickets-settings>
+  </div>
+  <p>Everything about support tickets.</p>
+  <div>
+    <div>
+      <i class="fa-regular fa-rectangle-list orange"></i>
+      <span #s1>{{ this.Tickets.Total }}</span>
+      Total
+    </div>
+    <div>
+      <i class="fa-solid fa-spinner blue"></i>
+      <span #s2>{{ this.Tickets.Pending }}</span>
+      Pending
+    </div>
+    <div>
+      <i class="fa-regular fa-circle-check green"></i>
+      <span #s3>{{ this.Tickets.Closed }}</span>
+      Closed
+    </div>
+    <div>
+      <i class="fa-regular fa-rectangle-xmark red"></i>
+      <span #s4>{{ this.Tickets.Deleted }}</span>
+      Deleted
+    </div>
+  </div>
+</div>

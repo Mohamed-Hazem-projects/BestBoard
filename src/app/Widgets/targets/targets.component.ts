@@ -21,17 +21,17 @@ export class TargetsComponent {
       first: {
         Name: 'Money Earned',
         Value: '3520',
-        Percentage: "80"
+        Percentage: "100"
       },
       second: {
         Name: 'Clients Satisfied',
         Value: '14',
-        Percentage: "40"
+        Percentage: "100"
       },
       third: {
         Name: 'Projects Completed',
         Value: '27',
-        Percentage: "60"
+        Percentage: "100"
       }
     }
   }
@@ -46,6 +46,9 @@ export class TargetsComponent {
 
     if (this.animate == false && window.innerHeight > this.green.nativeElement.getBoundingClientRect().y) {
       this.animate = true;
+      this.Targets.first.Percentage = "80"
+      this.Targets.second.Percentage = "40"
+      this.Targets.third.Percentage = "60"
     }
   }
   ToggleSettings() {

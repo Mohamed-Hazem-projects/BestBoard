@@ -67,6 +67,7 @@
           top: 0;
           left: 0;
           height: 100%;
+          transition: width 0.5s;
           > span {
             position: absolute;
             color: hsl(0deg 0% 96.72% / 95%);
@@ -150,9 +151,9 @@
     }
   }
 }
-// .animation1 {
-//   animation: span1 0.5s ease-in-out;
-// }
+.animation1 {
+  animation: span1 0.5s ease-in-out;
+}
 .animation2 {
   animation: span2 0.5s ease-in-out;
 }
@@ -164,7 +165,7 @@
     width: 100%;
   }
   to {
-    width: 60%;
+    width: 80%;
   }
 }
 @keyframes span2 {

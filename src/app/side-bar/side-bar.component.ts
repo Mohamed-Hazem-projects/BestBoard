@@ -18,6 +18,7 @@ export class SideBarComponent {
       { name: "Dashboard", icon: "fa-solid fa-chart-column fa-fw", address: "Home" },
       { name: "Profile", icon: "fa-solid fa-id-card fa-fw", address: "Profile" },
       { name: "Plans", icon: "fa-solid fa-earth-americas fa-fw", address: "Plans" },
+      { name: "Notes", icon: "fa-solid fa-note-sticky fa-fw", address: "Notes" },
       { name: "Statistics", icon: "fa-solid fa-chart-pie fa-fw", address: "Statistics" },
       { name: "Projects", icon: "fa-solid fa-diagram-project fa-fw", address: "Projects" },
       { name: "Courses", icon: "fa-solid fa-graduation-cap fa-fw", address: "Courses" },

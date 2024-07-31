@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="upper" Drag>
+    <h2>Settings</h2>
+    <i class="fa-solid fa-up-down-left-right"></i>
+    <div class="icon" (click)="CloseSettings()">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+  </div>
+  <div class="settings">
+    <form #form="ngForm" (ngSubmit)="getFormData(form)">
+      <h3>Change Values:</h3>
+      <div>
+        <label for="Total">Total:</label>
+        <input type="text" name="Total" id="Total" ngModel />
+      </div>
+      <div>
+        <label for="Pending">Pending:</label>
+        <input type="text" name="Pending" id="Pending" ngModel />
+      </div>
+      <div>
+        <label for="Closed">Closed:</label>
+        <input type="text" name="Closed" id="Closed" ngModel />
+      </div>
+      <div>
+        <label for="Deleted">Deleted:</label>
+        <input type="text" name="Deleted" id="Deleted" ngModel />
+      </div>
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+</div>

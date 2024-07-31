@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TargetSettingsModel } from '../../../Models/target-settings-model';
+import { DragDirective } from '../../../Directives/drag.directive';
 
 @Component({
   selector: 'targets-settings',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, DragDirective],
   templateUrl: './targets-settings.component.html',
   styleUrl: './targets-settings.component.scss'
 })

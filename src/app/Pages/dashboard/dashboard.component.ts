@@ -4,6 +4,7 @@ import { WrapperComponent } from '../../Utility/wrapper/wrapper.component';
 import { WelcomeComponent } from '../../Widgets/Welcome/welcome.component';
 import { DraftComponent } from '../../Widgets/draft/draft.component';
 import { TargetsComponent } from '../../Widgets/targets/targets.component';
+import { TicketsComponent } from '../../Widgets/tickets/tickets.component';
 
 @Component({
   selector: 'dashboard-home',
@@ -14,6 +15,7 @@ import { TargetsComponent } from '../../Widgets/targets/targets.component';
     , WelcomeComponent
     , DraftComponent
     , TargetsComponent
+    , TicketsComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
