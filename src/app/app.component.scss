@@ -10,7 +10,8 @@
   overflow: hidden;
 }
 side-bar {
-  box-shadow: 0 0 10px var(--greytemp);
+  //box-shadow: 0 0 10px var(--greytemp);
+  border-right: 1px solid var(--greytemp);
   position: relative;
   padding: 20px;
   position: sticky;

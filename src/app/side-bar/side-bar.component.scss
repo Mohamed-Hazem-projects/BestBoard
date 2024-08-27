@@ -6,13 +6,15 @@
   h3 {
     user-select: none;
     font-family: "Cookie", "Open sans";
-    font-size: 38px;
+    font-size: 44px;
     position: relative;
     margin-top: 0;
     text-align: center;
     margin-bottom: 30px;
     @media (max-width: 767px) {
-      font-size: 19px;
+      font-size: 22px;
+      position: relative;
+      left: -4px;
     }
   }
   h3::before,
@@ -27,25 +29,27 @@
     width: 100px;
     height: 2px;
     background-color: var(--black);
-    bottom: -3px;
+    bottom: -10px;
     border-radius: 20px;
     @media (max-width: 767px) {
-      bottom: -8px;
+      bottom: -4px;
       width: 50px;
+      left: 25px;
     }
   }
   h3::after {
     height: 12px;
     width: 12px;
     background-color: var(--greylight2);
-    bottom: -10px;
+    bottom: -17px;
     border: 2px solid var(--black);
     border-radius: 50%;
     outline: 7px double var(--white);
     @media (max-width: 767px) {
-      bottom: -13px;
+      bottom: -9px;
       height: 8px;
       width: 8px;
+      left: 25px;
     }
   }
   ul {

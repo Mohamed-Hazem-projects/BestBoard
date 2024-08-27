@@ -4,6 +4,9 @@
     type="search"
     name="search"
     placeholder="Search"
-    (change)="Search()"
+    (input)="Search()"
+    aria-label="Search by ID"
+    aria-describedby="search-help"
   />
+  <span id="search-help" hidden> Enter an ID to search for users. </span>
 </div>

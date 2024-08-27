@@ -16,13 +16,13 @@ export class SideBarComponent {
   constructor() {
     this.links = [
       { name: "Dashboard", icon: "fa-solid fa-chart-column fa-fw", address: "Home" },
+      { name: "Friends", icon: "fa-solid fa-user-group fa-fw", address: "Friends" },
       { name: "Profile", icon: "fa-solid fa-id-card fa-fw", address: "Profile" },
       { name: "Plans", icon: "fa-solid fa-earth-americas fa-fw", address: "Plans" },
       { name: "Notes", icon: "fa-solid fa-note-sticky fa-fw", address: "Notes" },
       { name: "Statistics", icon: "fa-solid fa-chart-pie fa-fw", address: "Statistics" },
       { name: "Projects", icon: "fa-solid fa-diagram-project fa-fw", address: "Projects" },
       { name: "Courses", icon: "fa-solid fa-graduation-cap fa-fw", address: "Courses" },
-      { name: "Friends", icon: "fa-solid fa-user-group fa-fw", address: "Friends" },
       { name: "Files", icon: "fa-solid fa-file fa-fw", address: "Files" },
       { name: "Settings", icon: "fa-solid fa-gear fa-fw", address: "Settings" }
     ]

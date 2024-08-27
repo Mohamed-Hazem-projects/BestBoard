@@ -4,7 +4,8 @@
   justify-content: space-between;
   background-color: var(--white);
   padding: 15px;
-  box-shadow: 0 0 10px var(--greytemp);
+  //box-shadow: 0 0 10px var(--greytemp);
+  border-bottom: 1px solid var(--greytemp);
 }
 .icons {
   display: flex;

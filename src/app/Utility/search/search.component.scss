@@ -17,7 +17,7 @@
 input {
   background-color: var(--white);
   padding: 10px;
-  border: 2px solid var(--grey2);
+  border: 2px solid var(--greydark);
   border-radius: 10px;
   margin-left: 5px;
   padding-left: 30px;
@@ -37,10 +37,13 @@ input:focus {
   @media (max-width: 767px) {
     width: 180px;
   }
-  border-color: var(--blue2);
+  @media (max-width: 400px) {
+    width: 155px;
+  }
+  border-color: var(--blue);
 }
 .search:focus-within::before {
-  color: var(--blue2);
+  color: var(--blue);
   transform: translateY(-50%) rotate(360deg);
 }
 input::placeholder {
