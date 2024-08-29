@@ -1,7 +1,7 @@
 <div class="main">
   <div class="intro">
     <div class="writing">
-      <h2>Welcome</h2>
+      <h2>Welcome,</h2>
       <p>{{ User.FirstName }}</p>
     </div>
     <img src="assets/welcome.png" alt="welcome" />
@@ -11,6 +11,11 @@
     <div>
       {{ User.FirstName }} {{ User.LastName }} <span>{{ User.Position }}</span>
     </div>
+    <div>{{ Date | date : "EEEE" }} <span>Day</span></div>
+    <div>{{ Date | date : "longDate" }} <span>Date</span></div>
+  </div>
+  <div class="body">
+    <div>8 <span>Clients</span></div>
     <div>{{ User.NoOfProjects }} <span>Project</span></div>
     <div>${{ User.MoneyEarned }} <span>Earned</span></div>
   </div>

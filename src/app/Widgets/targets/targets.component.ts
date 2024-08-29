@@ -2,11 +2,12 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { TargetsSettingsComponent } from './targets-settings/targets-settings.component';
 import { CommonModule } from '@angular/common';
 import { TargetSettingsModel } from '../../Models/target-settings-model';
+import { AppearDirective } from '../../Directives/appear.directive';
 
 @Component({
   selector: 'targets-widget',
   standalone: true,
-  imports: [TargetsSettingsComponent, CommonModule],
+  imports: [TargetsSettingsComponent, CommonModule, AppearDirective],
   templateUrl: './targets.component.html',
   styleUrl: './targets.component.scss'
 })
@@ -14,7 +15,6 @@ export class TargetsComponent {
   animate: boolean = false;
   settingsOpen: Boolean = false;
   Targets: TargetSettingsModel;
-  @ViewChild('green') green!: ElementRef;
 
   constructor() {
     this.Targets = {
@@ -36,20 +36,10 @@ export class TargetsComponent {
     }
   }
 
-  @HostListener('document:scroll')
   animationOnScroll() {
-
-    //console.log(window.innerHeight) this is the window's height
-    //window.scrollY this is how much you scrolled
-    //console.log(this.green.nativeElement.getBoundingClientRect().y)
-    //this if how far the element is from the top of the screen
-
-    if (this.animate == false && window.innerHeight > this.green.nativeElement.getBoundingClientRect().y) {
-      this.animate = true;
-      this.Targets.first.Percentage = "80"
-      this.Targets.second.Percentage = "40"
-      this.Targets.third.Percentage = "60"
-    }
+    this.Targets.first.Percentage = "80"
+    this.Targets.second.Percentage = "40"
+    this.Targets.third.Percentage = "60"
   }
   ToggleSettings() {
     this.settingsOpen = !this.settingsOpen

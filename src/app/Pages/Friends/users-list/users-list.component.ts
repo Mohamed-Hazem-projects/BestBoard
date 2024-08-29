@@ -5,12 +5,12 @@ import { catchError, Observable, of, Subscription, tap } from 'rxjs';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
-import { MyHeaderComponent } from './heading/my-header.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { IUser } from '../../../Models/user';
 import { IUserAPI } from '../../../Models/user-api';
 import { loadUserList } from '../../../state/userList/usersList.actions';
 import { selectError, selectStatus, selectUserByID, selectUserList } from '../../../state/userList/usersList.selectors';
+import { MyHeaderComponent } from '../../../Utility/my-header/my-header.component';
 
 @Component({
   selector: 'users-list',

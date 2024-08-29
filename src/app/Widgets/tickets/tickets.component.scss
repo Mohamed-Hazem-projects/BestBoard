@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     > h2 {
+      font-size: 24px;
       margin-top: 0;
       margin-bottom: 10px;
       @media (max-width: 767px) {
@@ -50,7 +51,8 @@
       border-radius: 10px;
       font-size: 13px;
       color: var(--greydark);
-      border: 1px solid var(--grey2);
+      transition: border 0.2s;
+      border: 2px solid var(--greylight2);
       width: calc(50% - 10px);
       @media (max-width: 767px) {
         width: 100%;
@@ -70,14 +72,34 @@
   }
 }
 .orange {
-  color: var(--orange);
+  i {
+    color: var(--orange);
+  }
+}
+.tickets > div > .orange:hover {
+  border-color: var(--orange);
 }
 .blue {
-  color: var(--blue);
+  i {
+    color: var(--blue);
+  }
+}
+.tickets > div > .blue:hover {
+  border-color: var(--blue);
 }
 .green {
-  color: var(--green);
+  i {
+    color: var(--green);
+  }
+}
+.tickets > div > .green:hover {
+  border-color: var(--green);
 }
 .red {
-  color: var(--red);
+  i {
+    color: var(--red);
+  }
+}
+.tickets > div > .red:hover {
+  border-color: var(--red);
 }

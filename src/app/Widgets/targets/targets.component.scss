@@ -8,6 +8,7 @@
     > h2 {
       margin-top: 0;
       margin-bottom: 10px;
+      font-size: 24px;
       > i {
         color: var(--blue);
         margin-right: 8px;
@@ -85,7 +86,7 @@
             border-width: 5px;
             border-style: solid;
             position: absolute;
-            bottom: -10px;
+            bottom: -9px;
             left: 50%;
             transform: translateX(-50%);
           }

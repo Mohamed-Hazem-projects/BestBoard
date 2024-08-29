@@ -6,6 +6,7 @@ import { DraftComponent } from '../../Widgets/draft/draft.component';
 import { TargetsComponent } from '../../Widgets/targets/targets.component';
 import { TicketsComponent } from '../../Widgets/tickets/tickets.component';
 import { NewsComponent } from '../../Widgets/news/news.component';
+import { TasksComponent } from '../../Widgets/tasks/tasks.component';
 
 @Component({
   selector: 'dashboard-home',
@@ -18,6 +19,7 @@ import { NewsComponent } from '../../Widgets/news/news.component';
     , TargetsComponent
     , TicketsComponent
     , NewsComponent
+    , TasksComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'

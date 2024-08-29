@@ -1,8 +1,10 @@
 .card {
+  display: flex;
+  flex-direction: column;
   min-width: 275px;
   border-radius: 25px;
-  background-color: var(--greylight2);
-  box-shadow: 0px 0px 10px -3px var(--greydarkboxshadow);
+  background-color: var(--white);
+  box-shadow: 0 0 10px var(--greytemp);
   > div {
     display: flex;
     flex-direction: column;
@@ -13,7 +15,7 @@
       height: 150px;
       width: 150px;
       border-radius: 50%;
-      background-color: var(--greylight2);
+      background-color: var(--white);
       padding: 3px;
       > a > img {
         height: 100%;
@@ -49,10 +51,13 @@
     }
     .overlay::after {
       border-radius: 0 25px 0 0;
-      background-color: var(--greylight2);
+      background-color: var(--white);
     }
   }
   > .card-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
     h2 {
       font-size: 22px;
       font-weight: 700;
@@ -64,6 +69,7 @@
       color: var(--blue);
     }
     p {
+      margin-bottom: 30px;
       font-size: 14px;
       color: var(--orange);
       text-align: center;
@@ -78,20 +84,24 @@
       font-size: 16px;
       color: #fff;
       padding: 8px 16px;
-      background-color: var(--blue);
+      background-color: var(--blue2);
       border-radius: 6px;
       margin: 14px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: var(--blue2);
+      background-color: var(--blue);
     }
   }
 }
 .card {
-  transition: transform 0.3s;
+  .card-image {
+    transition: transform 0.3s;
+  }
   &.card-hover {
-    transform: rotate(0.2deg) translateX(3px) translateY(-3px);
+    .card-image {
+      transform: scale(1.05);
+    }
   }
 }

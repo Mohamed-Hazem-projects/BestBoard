@@ -10,24 +10,24 @@
   </div>
   <p>Everything about support tickets.</p>
   <div>
-    <div>
-      <i class="fa-regular fa-rectangle-list orange"></i>
-      <span #s1>{{ this.Tickets.Total }}</span>
+    <div class="orange">
+      <i class="fa-regular fa-rectangle-list"></i>
+      <span #s1 (appear)="animationOnScroll()">{{ this.tickets.Total }}</span>
       Total
     </div>
-    <div>
-      <i class="fa-solid fa-spinner blue"></i>
-      <span #s2>{{ this.Tickets.Pending }}</span>
+    <div class="blue">
+      <i class="fa-solid fa-spinner"></i>
+      <span #s2>{{ this.tickets.Pending }}</span>
       Pending
     </div>
-    <div>
-      <i class="fa-regular fa-circle-check green"></i>
-      <span #s3>{{ this.Tickets.Closed }}</span>
+    <div class="green">
+      <i class="fa-regular fa-circle-check"></i>
+      <span #s3>{{ this.tickets.Closed }}</span>
       Closed
     </div>
-    <div>
-      <i class="fa-regular fa-rectangle-xmark red"></i>
-      <span #s4>{{ this.Tickets.Deleted }}</span>
+    <div class="red">
+      <i class="fa-regular fa-rectangle-xmark"></i>
+      <span #s4>{{ this.tickets.Deleted }}</span>
       Deleted
     </div>
   </div>

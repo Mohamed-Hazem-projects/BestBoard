@@ -7,10 +7,16 @@ import { provideEffects } from '@ngrx/effects';
 import { userListReducer } from './state/userList/usersList.reducer';
 import { userListEffects } from './state/userList/usersList.effects';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { AppState } from './state/app.state';
+import { tasksReducer } from './state/tasks/tasks.reducer';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(), provideAnimationsAsync(),
-  provideStore({
-    usersList: userListReducer, // Register feature state
-  }), provideEffects([userListEffects]),]
+  providers: [
+    provideRouter(routes), provideHttpClient(), provideAnimationsAsync(),
+    provideStore<AppState>({
+      usersList: userListReducer, // Register feature state
+      tasks: tasksReducer
+    })
+    , provideEffects([userListEffects])
+  ]
 };

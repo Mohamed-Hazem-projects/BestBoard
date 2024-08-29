@@ -7,12 +7,14 @@
     padding-bottom: 30px;
   }
   > .writing {
-    text-align: center;
+    @media (max-width: 767px) {
+      text-align: center;
+    }
     > h2 {
+      font-size: 24px;
       margin: 0;
     }
     > p {
-      margin-top: 5px;
       color: var(--greydark);
     }
   }
@@ -27,7 +29,7 @@
   @media (max-width: 767px) {
     flex-direction: column;
   }
-  margin-top: 35px;
+  margin-top: 20px;
   margin-bottom: 20px;
   border-top: 1px solid var(--greylight2);
   border-bottom: 1px solid var(--greylight2);
@@ -66,7 +68,7 @@ a {
   background-color: var(--blue2);
   color: white;
   width: fit-content;
-  margin: 44px 15px 20px auto;
+  margin: 39px 27px 20px auto;
   @media (max-width: 767px) {
     margin-top: 0;
   }

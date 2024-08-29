@@ -1,1 +1,13 @@
-<p>news works!</p>
+<div class="main">
+  <h2><i class="fa-solid fa-newspaper"></i>Latest News</h2>
+  <ng-container *ngFor="let news of News">
+    <div class="news-row">
+      <img [src]="news.img" alt="the news image" />
+      <div class="info">
+        <h3>{{ news.h3 }}</h3>
+        <p>{{ news.p }}</p>
+      </div>
+      <div class="days">{{ news.daysAgo }} Days Ago</div>
+    </div>
+  </ng-container>
+</div>

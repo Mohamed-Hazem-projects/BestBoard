@@ -23,14 +23,14 @@
   }
   button:hover {
     color: var(--background);
-    background: var(--blue);
+    background: var(--blue2);
     > i {
       color: var(--background);
     }
   }
   button.active {
     color: var(--background);
-    background: var(--blue);
+    background: var(--blue2);
   }
   > button:disabled {
     opacity: 30%;
