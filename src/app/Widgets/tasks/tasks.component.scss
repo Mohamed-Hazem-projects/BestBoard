@@ -1,14 +1,23 @@
 .main {
-  padding: 20px;
   background-color: var(--white);
   border-radius: 10px;
   > .header {
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
+    background-color: var(--greylight2);
     @media (max-width: 767px) {
       flex-direction: column;
     }
+    > img {
+      height: 72px;
+      padding-top: 5px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
     > h2 {
+      padding-top: 20px;
       margin-top: 0;
       margin-bottom: 20px;
       font-size: 24px;
@@ -19,7 +28,12 @@
       }
     }
     > .progress {
-      background-color: var(--greylight2);
+      margin-top: 20px;
+      @media (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      background-color: var(--grey2);
       font-size: 13px;
       padding: 5px 10px;
       border-radius: 6px;
@@ -29,16 +43,19 @@
       }
     }
   }
-  > .task-row {
+  .task-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 8px 12px;
+    border-radius: 10px;
     @media (max-width: 767px) {
       padding: 8px 6px;
     }
     transition: border-bottom 0.2s, background-color 0.2s;
     > .info {
+      max-width: 85%;
+      overflow: hidden;
       > h3 {
         margin-top: 0;
         margin-bottom: 5px;
@@ -52,6 +69,13 @@
     > .icons {
       display: flex;
       margin-left: 10px;
+      .cancel {
+        margin-right: 12px;
+        color: var(--red);
+        @media (max-width: 767px) {
+          margin-right: 6px;
+        }
+      }
       .delete {
         color: var(--red);
       }
@@ -63,7 +87,8 @@
         }
       }
       .delete,
-      .check {
+      .check,
+      .cancel {
         cursor: pointer;
         transition: 0.3s;
         font-size: 22px;
@@ -73,16 +98,19 @@
       }
     }
   }
-  > .task-row:hover {
+  .task-row:hover {
     background-color: var(--greylight2);
     border-bottom: 1px solid var(--blue);
   }
 }
 .finished {
-  opacity: 0.3;
   h3,
   p {
+    opacity: 0.3;
     text-decoration: line-through;
+  }
+  i {
+    opacity: 0.7;
   }
 }
 .main .header .progress.all-complete {
@@ -94,7 +122,7 @@
   padding: 20px 6px;
 }
 .task-row:last-of-type {
-  border-bottom-color: white;
+  border-bottom-color: var(--white);
 }
 .add {
   display: block;
@@ -102,8 +130,7 @@
   border-radius: 6px;
   background-color: var(--blue2);
   color: white;
-  width: fit-content;
-  margin: 8px 8px 0 auto;
+  margin: 0 20px 20px auto;
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -111,4 +138,14 @@
 }
 .add:hover {
   background-color: var(--blue);
+}
+.scroll {
+  padding: 0 20px;
+  height: 370px;
+  @media (max-width: 767px) {
+    height: fit-content;
+    min-height: 100px;
+    max-height: 400px;
+  }
+  overflow: scroll;
 }

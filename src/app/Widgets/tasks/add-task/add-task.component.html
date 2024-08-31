@@ -1,0 +1,17 @@
+<div class="main">
+  <div class="upper" Drag>
+    <h2>Add Task</h2>
+    <i class="fa-solid fa-up-down-left-right move"></i>
+    <i class="fa-regular fa-circle-xmark cancel" (click)="CloseSettings()"></i>
+  </div>
+  <div class="settings">
+    <form #form="ngForm" (ngSubmit)="getFormData(form)">
+      <label for="task">Task :</label>
+      <input type="text" name="task" id="task" ngModel />
+      <label for="taskDetails">Task Details :</label>
+      <!-- <input type="textarea" name="taskDetails" id="taskDetails" ngModel /> -->
+      <textarea name="taskDetails" id="taskDetails" ngModel></textarea>
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+</div>

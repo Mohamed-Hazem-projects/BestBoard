@@ -25,8 +25,10 @@ export const tasksReducer = createReducer(
 
   on(removeTask, (state, { taskNo }) => ({
     ...state,
-    tasks: state.tasks.filter((_, i) => i !== taskNo),
-    noOfTasks: state.noOfTasks - 1
+    noOfTasks: state.noOfTasks - 1,
+    noOfFinishedTasks:
+      state.tasks[taskNo].finished ? state.noOfFinishedTasks - 1 : state.noOfFinishedTasks,
+    tasks: state.tasks.filter((_, i) => i !== taskNo)
   })),
   on(finishTask, (state, { taskNo }) => ({
     ...state,
@@ -34,6 +36,6 @@ export const tasksReducer = createReducer(
       return i === taskNo ? { ...task, finished: !task.finished } : task
     }),
     noOfFinishedTasks:
-      state.tasks[taskNo].finished ? state.noOfFinishedTasks + 1 : state.noOfFinishedTasks - 1
+      state.tasks[taskNo].finished ? state.noOfFinishedTasks - 1 : state.noOfFinishedTasks + 1
   }))
 )

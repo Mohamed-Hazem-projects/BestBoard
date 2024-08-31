@@ -7,6 +7,7 @@ import { TargetsComponent } from '../../Widgets/targets/targets.component';
 import { TicketsComponent } from '../../Widgets/tickets/tickets.component';
 import { NewsComponent } from '../../Widgets/news/news.component';
 import { TasksComponent } from '../../Widgets/tasks/tasks.component';
+import { WidgetAppearDirective } from '../../Directives/widgetAppear.directive';
 
 @Component({
   selector: 'dashboard-home',
@@ -20,6 +21,7 @@ import { TasksComponent } from '../../Widgets/tasks/tasks.component';
     , TicketsComponent
     , NewsComponent
     , TasksComponent
+    , WidgetAppearDirective
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'

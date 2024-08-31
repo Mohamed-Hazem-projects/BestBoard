@@ -6,4 +6,12 @@
   @media (max-width: 767px) {
     display: block;
   }
+  opacity: 0;
+  position: relative;
+  top: 35px;
+  transition: opacity 0.3s ease-out, top 0.3s ease-out;
+}
+.appeared {
+  opacity: 1;
+  top: 0;
 }

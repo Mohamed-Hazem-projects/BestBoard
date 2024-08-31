@@ -1,33 +1,49 @@
 <div class="main">
   <div class="header">
     <h2><i class="fa-solid fa-list-check"></i>Latest Tasks</h2>
+    <img src="assets/tasks.png" alt="tasks image" />
     <div
+      *ngIf="(noOfTasks | async) !== 0; else allfinished"
       class="progress"
       [class.all-complete]="(noOfFinishedTasks | async) === (noOfTasks | async)"
     >
       {{ noOfFinishedTasks | async }}/{{ noOfTasks | async }} Completed
     </div>
+    <ng-template #allfinished>
+      <div class="progress all-complete">no tasks</div></ng-template
+    >
   </div>
-  <ng-container *ngFor="let task of tasks | async; index as i">
-    <div class="task-row" [class.finished]="task.finished">
-      <div class="info">
-        <h3>{{ task.task }}</h3>
-        <p>{{ task.taskDetails }}</p>
+  <div class="scroll">
+    <ng-container *ngFor="let task of tasks | async; index as i">
+      <div class="task-row" [class.finished]="task.finished">
+        <div class="info">
+          <h3>{{ task.task }}</h3>
+          <p>{{ task.taskDetails }}</p>
+        </div>
+        <div class="icons">
+          <i
+            class="fa-regular fa-circle-check check"
+            (click)="finishTask(i)"
+            *ngIf="!task.finished"
+          ></i>
+          <i
+            class="fa-regular fa-circle-xmark cancel"
+            (click)="finishTask(i)"
+            *ngIf="task.finished"
+          ></i>
+          <i
+            class="fa-regular fa-trash-can delete"
+            (click)="OpenDeleteTask(task.task, i)"
+          ></i>
+        </div>
       </div>
-      <div class="icons">
-        <i
-          class="fa-regular fa-circle-check check"
-          (click)="finishTask(i)"
-          *ngIf="!task.finished"
-        ></i>
-        <i
-          class="fa-regular fa-circle-xmark check"
-          (click)="finishTask(i)"
-          *ngIf="task.finished"
-        ></i>
-        <i class="fa-regular fa-trash-can delete"></i>
-      </div>
-    </div>
-  </ng-container>
-  <button class="add">Add Task</button>
+    </ng-container>
+  </div>
+  <button class="add" (click)="ToggleAddTask()">Add Task</button>
+  <delete-task
+    *ngIf="deleteTaskFlag"
+    [task]="taskToBeDeleted"
+    (Close)="CloseDeleteTask()"
+  ></delete-task>
+  <add-task *ngIf="addTaskFlag" (Close)="CloseAddTask()"></add-task>
 </div>

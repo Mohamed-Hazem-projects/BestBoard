@@ -20,26 +20,14 @@
       font-size: 20px;
       margin: 0;
     }
-    > i {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-25%);
-      font-size: 23px;
-      color: hsl(0deg 0% 50% / 15%);
+    > .move {
+      font-size: 28px;
+      color: hsla(0, 0%, 50%, 0.1);
     }
-    .icon {
-      width: 24px;
-      height: 24px;
-      background-color: var(--red);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
+    .cancel {
+      font-size: 29px;
+      color: var(--red);
       cursor: pointer;
-      > i {
-        color: white;
-        font-size: 22px;
-      }
     }
   }
   .settings {
@@ -48,6 +36,8 @@
     height: 350px;
     overflow-y: auto;
     cursor: default;
+    top: -1px;
+    position: relative;
     form {
       h3 {
         margin: 0;
