@@ -23,26 +23,42 @@
     margin-bottom: -22px;
   }
 }
-.body {
+.slider {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
   text-align: center;
-  display: flex;
-  @media (max-width: 767px) {
-    flex-direction: column;
-  }
   margin-top: 20px;
   margin-bottom: 20px;
   border-top: 1px solid var(--greylight2);
   border-bottom: 1px solid var(--greylight2);
-  > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1;
-    height: 100px;
-    transition: background-color 0.25s;
-    font-weight: bold;
-    @media (max-width: 767px) {
-      padding: 10px;
+  > .body {
+    height: 100%;
+    width: 100%;
+    > div {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid var(--greylight2);
+      border-left: 1px solid var(--greylight2);
+      border-radius: 20px;
+      height: 80%;
+      width: calc(100% / 3);
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      transition: background-color 0.25s;
+      font-weight: bold;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      i {
+        font-size: 12px;
+        margin-left: 5px;
+        color: var(--blue);
+      }
     }
   }
   @media (max-width: 767px) {
@@ -50,7 +66,7 @@
       margin-bottom: 5px;
     }
   }
-  > div:hover {
+  > .body > div:hover {
     background-color: var(--greylight2);
   }
   span {
@@ -90,4 +106,56 @@ img.avatar {
   @media (max-width: 767px) {
     display: block;
   }
+}
+.animate1 {
+  animation: 8s linear forwards infinite slide1;
+  @media (max-width: 767px) {
+    animation: 6s linear forwards infinite slidephone1;
+  }
+}
+.animate2 {
+  transform: translateX(-17.5%);
+  animation: 8s linear forwards infinite slide2;
+  @media (max-width: 767px) {
+    transform: translateX(-50%);
+    animation: 6s linear forwards infinite slidephone2;
+  }
+}
+@keyframes slide1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide2 {
+  from {
+    transform: translateX(-16.66%);
+  }
+  to {
+    transform: translateX(-116.66%);
+  }
+}
+@keyframes slidephone1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+@keyframes slidephone2 {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(-350%);
+  }
+}
+.paused {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
 }

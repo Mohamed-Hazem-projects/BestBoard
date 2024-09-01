@@ -1,11 +1,12 @@
 import { DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { InfiniteSlidingDirective } from '../../Directives/infinite-sliding.directive';
 
 @Component({
   selector: 'welcome-widget',
   standalone: true,
-  imports: [RouterLink, DatePipe],
+  imports: [RouterLink, DatePipe, InfiniteSlidingDirective],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss'
 })
@@ -27,4 +28,5 @@ export class WelcomeComponent {
       MoneyEarned: 4320
     }
   }
+
 }

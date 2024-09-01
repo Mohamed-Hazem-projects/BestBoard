@@ -7,17 +7,59 @@
     <img src="assets/welcome.png" alt="welcome" />
   </div>
   <img src="assets/avatar1.png" alt="" class="avatar boxshadow" />
-  <div class="body">
-    <div>
-      {{ User.FirstName }} {{ User.LastName }} <span>{{ User.Position }}</span>
+  <div class="slider">
+    <div class="body animate1" InfiniteSliding>
+      <div>
+        {{ Date | date : "EEEE" }}
+        <span> Day<i class="fa-regular fa-calendar-days"></i></span>
+      </div>
+      <div>
+        {{ User.FirstName }} {{ User.LastName }}
+        <span> {{ User.Position }}<i class="fa-solid fa-user"></i></span>
+      </div>
+      <div>
+        {{ Date | date : "longDate" }}
+        <span>Date<i class="fa-solid fa-calendar"></i></span>
+      </div>
+      <div>
+        {{ Date | date : "EEEE" }}
+        <span> Day<i class="fa-regular fa-calendar-days"></i></span>
+      </div>
+      <div>
+        {{ User.FirstName }} {{ User.LastName }}
+        <span> {{ User.Position }}<i class="fa-solid fa-user"></i></span>
+      </div>
+      <div>
+        {{ Date | date : "longDate" }}
+        <span> Date<i class="fa-solid fa-calendar"></i></span>
+      </div>
     </div>
-    <div>{{ Date | date : "EEEE" }} <span>Day</span></div>
-    <div>{{ Date | date : "longDate" }} <span>Date</span></div>
   </div>
-  <div class="body">
-    <div>8 <span>Clients</span></div>
-    <div>{{ User.NoOfProjects }} <span>Project</span></div>
-    <div>${{ User.MoneyEarned }} <span>Earned</span></div>
+  <div class="slider">
+    <div class="body animate2" InfiniteSliding>
+      <div>
+        8 <span> Clients<i class="fa-solid fa-person"></i></span>
+      </div>
+      <div>
+        {{ User.NoOfProjects }}
+        <span> Project<i class="fa-solid fa-shield"></i></span>
+      </div>
+      <div>
+        ${{ User.MoneyEarned }}
+        <span> Earned<i class="fa-solid fa-wallet"></i></span>
+      </div>
+      <div>
+        8 <span> Clients<i class="fa-solid fa-person"></i></span>
+      </div>
+      <div>
+        {{ User.NoOfProjects }}
+        <span> Project<i class="fa-solid fa-shield"></i></span>
+      </div>
+      <div>
+        ${{ User.MoneyEarned }}
+        <span> Earned<i class="fa-solid fa-wallet"></i></span>
+      </div>
+    </div>
   </div>
   <a routerLink="/Profile">Profile</a>
 </div>
