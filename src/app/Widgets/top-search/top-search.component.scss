@@ -1,0 +1,40 @@
+.main {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  > h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    i {
+      color: var(--blue);
+      margin-right: 8px;
+      font-size: 22px;
+    }
+  }
+  > .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    transition: border-bottom 0.2s, background-color 0.2s;
+    font-size: 16px;
+  }
+  .btnz {
+    background-color: var(--greylight2);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
+}
+.main .items:hover {
+  background-color: var(--greylight2);
+  border-bottom: 1px solid var(--blue);
+}
+
+.items {
+  border-bottom: 1px solid var(--greylight2);
+}
+.items:last-of-type {
+  border-bottom-color: var(--white);
+}

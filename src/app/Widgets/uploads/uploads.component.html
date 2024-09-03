@@ -1,0 +1,13 @@
+<div class="main">
+  <h2><i class="fa-solid fa-upload"></i>Latest Uploads</h2>
+  <div class="items" *ngFor="let file of files">
+    <div class="file">
+      <img [src]="file.img" alt="file type" />
+      <div class="file-writing">
+        <h2>{{ file.name }}</h2>
+        <span>{{ file.owner }}</span>
+      </div>
+    </div>
+    <span class="btnz">{{ file.size }} MB</span>
+  </div>
+</div>

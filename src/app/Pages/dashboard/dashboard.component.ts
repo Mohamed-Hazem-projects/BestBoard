@@ -8,6 +8,13 @@ import { TicketsComponent } from '../../Widgets/tickets/tickets.component';
 import { NewsComponent } from '../../Widgets/news/news.component';
 import { TasksComponent } from '../../Widgets/tasks/tasks.component';
 import { WidgetAppearDirective } from '../../Directives/widgetAppear.directive';
+import { TopSearchComponent } from '../../Widgets/top-search/top-search.component';
+import { UploadsComponent } from '../../Widgets/uploads/uploads.component';
+import { CurrentProjectComponent } from '../../Widgets/current-project/current-project.component';
+import { RemindersComponent } from '../../Widgets/reminders/reminders.component';
+import { PostsComponent } from '../../Widgets/posts/posts.component';
+import { SocialMediaComponent } from '../../Widgets/social-media/social-media.component';
+import { ProjectsComponent } from '../../Widgets/projects/projects.component';
 
 @Component({
   selector: 'dashboard-home',
@@ -22,6 +29,13 @@ import { WidgetAppearDirective } from '../../Directives/widgetAppear.directive';
     , NewsComponent
     , TasksComponent
     , WidgetAppearDirective
+    , TopSearchComponent
+    , UploadsComponent
+    , CurrentProjectComponent
+    , RemindersComponent
+    , PostsComponent
+    , SocialMediaComponent
+    , ProjectsComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'

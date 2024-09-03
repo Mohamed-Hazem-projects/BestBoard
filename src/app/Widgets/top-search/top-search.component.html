@@ -1,0 +1,7 @@
+<div class="main">
+  <h2><i class="fa-solid fa-magnifying-glass"></i>Top Searched</h2>
+  <div class="items" *ngFor="let word of words">
+    <span>{{ word.word }}</span>
+    <span class="btnz">{{ word.count }}</span>
+  </div>
+</div>

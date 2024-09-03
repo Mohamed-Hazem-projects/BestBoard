@@ -1,0 +1,75 @@
+.main {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  position: relative;
+  > h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    i {
+      color: var(--blue);
+      margin-right: 8px;
+      font-size: 22px;
+    }
+  }
+  > ul {
+    margin: 0;
+    position: relative;
+    li {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  > img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    opacity: 0.2;
+  }
+}
+//the line
+ul::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  width: 4px;
+  height: 100%;
+  background-color: var(--green);
+}
+//the circles
+li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 3px solid var(--white);
+  outline: 3px solid var(--green);
+  margin-right: 15px;
+  z-index: 1;
+}
+li.done::before {
+  background-color: var(--green);
+}
+li.current::before {
+  animation: 1s infinite alternate change-color;
+}
+@keyframes change-color {
+  from {
+    background-color: var(--green);
+  }
+  to {
+    background-color: var(--white);
+  }
+}

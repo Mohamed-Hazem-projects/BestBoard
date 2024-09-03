@@ -1,0 +1,99 @@
+.main {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  > h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    i {
+      color: var(--blue);
+      margin-right: 8px;
+      font-size: 22px;
+    }
+  }
+  > ul {
+    margin: 0;
+    > li {
+      display: flex;
+      align-items: center;
+      margin-top: 21px;
+      > span {
+        margin-right: 15px;
+        display: block;
+        border-radius: 50%;
+        position: relative;
+      }
+      > div {
+        padding-left: 15px;
+        > p {
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 0;
+          margin-bottom: 5px;
+        }
+        > span {
+          font-size: 13px;
+          color: var(--greydark);
+        }
+      }
+    }
+  }
+}
+.key {
+  width: 16px;
+  height: 16px;
+}
+div.blue {
+  border-left: 2px solid var(--blue);
+}
+span.blue {
+  background-color: var(--blue);
+}
+div.green {
+  border-left: 2px solid var(--green);
+}
+span.green {
+  background-color: var(--green);
+}
+div.red {
+  border-left: 2px solid var(--red);
+}
+span.red {
+  background-color: var(--red);
+}
+div.orange {
+  border-left: 2px solid var(--orange);
+}
+span.orange {
+  background-color: var(--orange);
+}
+span::before,
+span::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  background-color: inherit;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+}
+span::before {
+  animation: 2s ease-out infinite pulse;
+}
+span::after {
+  animation: 2s 1s ease-out infinite pulse;
+}
+@keyframes pulse {
+  from {
+    opacity: 0.8;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
