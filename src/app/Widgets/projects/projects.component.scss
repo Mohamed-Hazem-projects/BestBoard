@@ -5,11 +5,17 @@
   > h2 {
     font-size: 24px;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     i {
       color: var(--blue);
       margin-right: 8px;
       font-size: 22px;
+    }
+  }
+  .table {
+    table {
+      font-size: 15px;
+      width: 100%;
     }
   }
 }
