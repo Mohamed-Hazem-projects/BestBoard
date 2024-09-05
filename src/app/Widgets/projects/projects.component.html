@@ -1,6 +1,74 @@
 <div class="main">
-  <h2><i class="fa-solid fa-file-shield"></i>Projects</h2>
-  <div class="table">
-    <table></table>
+  <div class="head">
+    <h2><i class="fa-solid fa-file-shield"></i>Projects</h2>
+    <button
+      class="btn clk fs Progress"
+      (click)="toggleAddProject(undefined, 99)"
+    >
+      Add Project
+    </button>
   </div>
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Client</td>
+          <td>Profit</td>
+          <td>Team</td>
+          <td>Status</td>
+          <td>Edit</td>
+          <td>Delete</td>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let project of projects | async; index as i">
+          <tr>
+            <td>{{ project.name }}</td>
+            <td>{{ project.client }}</td>
+            <td>{{ project.Profit }}$</td>
+            <td>
+              <img
+                *ngFor="let picture of project.team"
+                [src]="picture"
+                alt="team member"
+              />
+            </td>
+            <td>
+              <span class="btn" [class]="project.status">
+                {{ project.status }}</span
+              >
+            </td>
+            <td>
+              <button
+                class="btn Completed clk"
+                (click)="toggleAddProject(project, i)"
+              >
+                Edit
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn Rejected clk"
+                (click)="openDeleteProject(project.name, i)"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <delete-project
+    [project]="projectToBeDeleted"
+    *ngIf="deleteProjectFlag"
+    (Close)="closeDeleteProject()"
+  ></delete-project>
+  <add-edit-project
+    [projectToEdit]="editedProject"
+    [index]="editedProjectIndex"
+    *ngIf="addProjectFlag"
+    (Close)="closeAddProject()"
+  ></add-edit-project>
 </div>

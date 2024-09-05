@@ -1,0 +1,42 @@
+<div class="main">
+  <div class="upper" Drag>
+    <h2>{{ this.projectToEdit ? "Edit" : "Add" }} Project</h2>
+    <i class="fa-solid fa-up-down-left-right move"></i>
+    <i class="fa-regular fa-circle-xmark cancel" (click)="CloseSettings()"></i>
+  </div>
+  <div class="settings">
+    <form #form="ngForm" (ngSubmit)="getFormData(form)">
+      <label for="task">Name :</label>
+      <input type="text" name="name" id="name" ngModel />
+      <label for="client">Client :</label>
+      <input type="text" name="client" id="client" ngModel />
+      <label for="Profit">Profit :</label>
+      <input type="number" name="Profit" id="Profit" ngModel />
+
+      <label>Team members :</label>
+      <div class="team" ngModelGroup="team">
+        <div class="team-member" *ngFor="let member of teamIndexArr">
+          <label [for]="member"><img [src]="team[member]" /></label>
+          <input
+            class="cb"
+            type="checkbox"
+            [id]="member"
+            [name]="member.toString()"
+            [value]="member"
+            ngModel
+          />
+        </div>
+      </div>
+
+      <label for="status">Status :</label>
+      <select name="status" id="status" ngModel>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+        <option value="Pending">Pending</option>
+        <option value="Rejected">Rejected</option>
+      </select>
+
+      <input type="submit" value="Save" />
+    </form>
+  </div>
+</div>

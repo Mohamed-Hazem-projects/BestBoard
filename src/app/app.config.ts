@@ -9,13 +9,15 @@ import { userListEffects } from './state/userList/usersList.effects';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { AppState } from './state/app.state';
 import { tasksReducer } from './state/tasks/tasks.reducer';
+import { projectsReducer } from './state/Projects/projects.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes), provideHttpClient(), provideAnimationsAsync(),
     provideStore<AppState>({
-      usersList: userListReducer, // Register feature state
-      tasks: tasksReducer
+      usersList: userListReducer,
+      tasks: tasksReducer,
+      projects: projectsReducer
     })
     , provideEffects([userListEffects])
   ]

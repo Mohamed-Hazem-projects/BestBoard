@@ -1,0 +1,21 @@
+<div class="overlay" (click)="close($event)"></div>
+<div class="main">
+  <i class="fa-solid fa-xmark close" (click)="close($event)"></i>
+  <i
+    class="fa-regular fa-circle-xmark red"
+    [class.animate]="animate"
+    *ngIf="!changeIcon"
+  ></i>
+  <i
+    class="fa-regular fa-circle-check green"
+    [class.animate2]="!animate"
+    *ngIf="changeIcon"
+  ></i>
+  <h2>Are you sure?</h2>
+  <p>Do you really want to delete the following Project?</p>
+  <h3>{{ project.project }}</h3>
+  <div class="buttons">
+    <button class="close2" (click)="close($event)">Close</button>
+    <button class="delete" (click)="startAnimation()">Delete</button>
+  </div>
+</div>

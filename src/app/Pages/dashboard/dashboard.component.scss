@@ -21,3 +21,9 @@
     margin: 10px;
   }
 }
+.mb {
+  margin-bottom: 20px;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
