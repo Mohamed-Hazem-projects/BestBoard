@@ -1,0 +1,32 @@
+<div class="main">
+  <h2><i class="fa-solid fa-circle-info"></i>General Info</h2>
+  <p>General Information about you.</p>
+  <div class="inputs">
+    <label for="first">First Name</label>
+    <input type="text" id="first" value="Mohamed" />
+    <span></span>
+  </div>
+  <div class="inputs">
+    <label for="Last">Last Name</label>
+    <input type="text" id="Last" value="Hazem" />
+    <span></span>
+  </div>
+  <div class="inputs">
+    <label for="Email">Email</label>
+    <div>
+      <div>
+        <input
+          type="email"
+          class="email"
+          id="Email"
+          [disabled]="!allowChange"
+          value="mohazemwork@gmail.com"
+        />
+        <span></span>
+      </div>
+      <button (click)="disablechange()" [class.green]="allowChange">
+        {{ buttonText }}
+      </button>
+    </div>
+  </div>
+</div>

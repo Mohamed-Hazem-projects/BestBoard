@@ -14,5 +14,10 @@ export const routes: Routes = [
     loadComponent: () => import('./Pages/Friends/user-details/user-details.component')
       .then(r => r.UserDetailsComponent)
   },
+  {
+    path: 'Settings',
+    loadComponent: () => import('./Pages/Settings/settings.component')
+      .then(r => r.SettingsComponent)
+  },
   { path: '**', component: DashboardComponent }//implement not found later
 ];

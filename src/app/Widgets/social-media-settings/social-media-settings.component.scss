@@ -1,0 +1,21 @@
+.main {
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  > h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    > i {
+      color: var(--blue);
+      font-size: 22px;
+      margin-right: 8px;
+    }
+  }
+  > p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--greydark);
+    font-size: 15px;
+  }
+}
