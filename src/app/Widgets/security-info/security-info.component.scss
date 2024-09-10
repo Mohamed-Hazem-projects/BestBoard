@@ -19,3 +19,34 @@
     font-size: 15px;
   }
 }
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0px;
+  > .first {
+    > p {
+      color: var(--greydark);
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 13px;
+    }
+  }
+  > button {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    width: 78px;
+    height: 32px;
+    padding: 5px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  > button.diffbtn {
+    background-color: var(--greydark);
+  }
+}
+.box:not(:last-of-type) {
+  border-bottom: 1px solid var(--greylight2);
+}

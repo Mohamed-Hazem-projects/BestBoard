@@ -1,4 +1,18 @@
 <div class="main">
   <h2><i class="fa-solid fa-screwdriver-wrench"></i>Widgets Control</h2>
   <p>Show/Hide widgets.</p>
+  <div class="controls">
+    <div class="controlone">
+      <div class="control" *ngFor="let control of controlsone">
+        <input type="checkbox" [name]="control.id" [id]="control.id" />
+        <label [for]="control.id">{{ control.name }}</label>
+      </div>
+    </div>
+    <div class="controltwo">
+      <div class="control" *ngFor="let control of controlstwo">
+        <input type="checkbox" [name]="control.id" [id]="control.id" checked />
+        <label [for]="control.id">{{ control.name }}</label>
+      </div>
+    </div>
+  </div>
 </div>

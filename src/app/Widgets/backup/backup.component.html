@@ -1,4 +1,39 @@
 <div class="main">
   <h2><i class="fa-solid fa-cloud"></i>Backup Manager</h2>
   <p>Control backup time and location.</p>
+  <div class="date">
+    <input type="radio" name="time" id="daily" checked />
+    <label for="daily">Daily</label>
+  </div>
+  <div class="date">
+    <input type="radio" name="time" id="weekly" checked />
+    <label for="weekly">Weekly</label>
+  </div>
+  <div class="date">
+    <input type="radio" name="time" id="monthly" checked />
+    <label for="monthly">Monthly</label>
+  </div>
+  <div class="servers">
+    <input type="radio" name="servers" id="s-one" checked />
+    <div>
+      <label for="s-one">
+        <i class="fa-solid fa-server"></i>
+        Main Server
+      </label>
+    </div>
+    <input type="radio" name="servers" id="s-two" />
+    <div>
+      <label for="s-two">
+        <i class="fa-solid fa-server"></i>
+        Backup Server(Septembre)
+      </label>
+    </div>
+    <input type="radio" name="servers" id="s-three" />
+    <div>
+      <label for="s-three">
+        <i class="fa-solid fa-server"></i>
+        Backup Server(August)
+      </label>
+    </div>
+  </div>
 </div>

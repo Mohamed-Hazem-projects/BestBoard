@@ -19,3 +19,62 @@
     font-size: 15px;
   }
 }
+.social {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--greydark);
+    width: 50px;
+    height: 50px;
+    background-color: var(--greylight);
+    border: 1px solid var(--greylight2);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: 0.3s;
+    font-size: 30px;
+  }
+  > input {
+    width: 100%;
+    height: 50px;
+    background-color: var(--greylight);
+    border: 1px solid var(--greylight);
+    padding-left: 10px;
+    border-radius: 0 6px 6px 0;
+    transition: 0.3s;
+  }
+}
+.social:focus-within > i {
+  color: var(--white);
+}
+.social.linkedin:focus-within > input {
+  height: 48px;
+  border-color: #0a66c2;
+}
+.social.linkedin:focus-within > i {
+  background-color: #0a66c2;
+}
+.social.mail:focus-within > input {
+  height: 48px;
+  border-color: #dd4b39;
+}
+.social.mail:focus-within > i {
+  background-color: #dd4b39;
+}
+.social.github:focus-within > input {
+  height: 48px;
+  border-color: #c9510c;
+}
+.social.github:focus-within > i {
+  background-color: #c9510c;
+}
+.social.facebook:focus-within > input {
+  height: 48px;
+  border-color: #1877f2;
+}
+.social.facebook:focus-within > i {
+  background-color: #1877f2;
+}

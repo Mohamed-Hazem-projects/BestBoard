@@ -14,8 +14,65 @@
   }
   > p {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     color: var(--greydark);
     font-size: 15px;
   }
+}
+.controls {
+  display: flex;
+  .control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    > input {
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    > label {
+      padding-left: 30px;
+      cursor: pointer;
+      position: relative;
+      font-size: 17px;
+    }
+    > label::after,
+    label::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -9px;
+      border-radius: 4px;
+    }
+    > label::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--greydark);
+    }
+    > label:hover::before {
+      border-color: var(--blue);
+    }
+
+    > label::after {
+      content: "\f00c";
+      font-family: var(--fa-style-family-classic);
+      font-weight: 900;
+      font-size: 12px;
+      color: var(--white);
+      background-color: var(--blue);
+      width: 18px;
+      height: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0) rotate(360deg);
+      transition: 0.3s;
+    }
+    > input:checked + label::after {
+      transform: scale(1) rotate(0);
+    }
+  }
+}
+.controltwo {
+  padding-left: calc(50% - 170px);
 }
